@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom image for Omeka-S</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -14,24 +16,38 @@
             <div> <h1 class="center">Omeka-S</h1> <br>
                 <h3 class="center">Custom image upload </h3>
                 <div class="spacer"> 
-                    <label for="upload">Upload image
-                    <input type="file" name="upload" id="image_upload">
+                    <form action="upload" method="post" autocomplete="off">
+                        <label class="label-width" for="name">Name</label>
+                        <input type="text" name="name" id="name">
+                        <br>
+                        <label for="description">Description</label>
+                        <input type="text" name="description" id="description"> <br>
+                         
+                        <label for="upload">Upload image </label>
+                            <input type="file" name="upload" id="image_upload">
+                            <br> <br>
+                            <input type="submit" value="submit">
+                    </form>
                 </div>
             </div>
           
-               <table> <tr class="bg-color light-text">
+               <table id="upload-list"> <tr class="bg-color light-text">
                 <th class="width-5 center">S.No</th>
                 <th class="width-20 center">Name</th>
-                <th class="width-35 center">Description</th>
+                <th class="width-25 center">Description</th>
                 <th class="width-20 center">Url</th>
+                <th class="">edit</th>
+                
                 <th class="width-20 center">Image</th>
               
-            </tr> <br>
+            </tr> 
+            <br>
             <tr>
                 <td class="list-head center">3</td>
                 <td class="list-head">Name</td>
                 <td class="list-head">Description</td>
                 <td class="list-head">Url</td>
+                <td class="button-middle"><button class="text-blue">Edit</button> <br><button class="text-red">Delete</button></td>
                 <td class="list-head"><img class="img-box" src="upload/sample.jpg" alt=""></td>
                
             </tr>
@@ -40,20 +56,29 @@
                 <td class="list-head center">2</td>
                 <td class="list-head">Name</td>
                 <td class="list-head">Description</td>
-                <td class="list-head">Url</td>
+                <td class="list-head"><p>Url</p>
+                <br><button >Copy</button>    
+                </td>
+                <td class="button-middle"><button class="text-blue">Edit</button> <br><button class="text-red">Delete</button></td>
                 <td class="list-head"><img class="img-box" src="upload/sample-1.jpg" alt=""></td>
                 
-            </tr><br>
+            </tr>
+            <br>
             <tr>
-                <td class="list-head center ">1</td>
+                <td class="list-head center">1</td>
                 <td class="list-head">Name</td>
                 <td class="list-head">Description</td>
                 <td class="list-head">Url</td>
+                <td class="button-middle"><button class="text-blue">Edit</button> <br><button class="text-red">Delete</button></td>
                 <td class="list-head"><img class="img-box" src="upload/sample-2.jpg" alt=""></td>
                  
             </tr></table>  <br>
             
         </div>
+
+        
+ 
+      
     </div>
     <script src="/js/upload.js"></script>
 </body>

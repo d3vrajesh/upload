@@ -64,3 +64,29 @@ tr:nth-child(even) {
 {
     width: 35%;
 }
+input[type=text] {
+    width: 25%; 
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+.label-width {
+width: 25%;
+}
+.button-middle {
+    vertical-align: middle;
+    align-content: center;
+    text-align: center;
+    line-height: 30px;
+}
+.text-blue {
+    color: blue;
+}
+.text-red {
+    color: red;
+}
+.text-green {
+    color: green;
+}
